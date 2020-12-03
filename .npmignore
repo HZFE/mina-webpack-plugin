@@ -1,0 +1,9 @@
+test
+src
+babel.config.json
+.prettierrc
+commitlint.config.js
+
+.vscode
+.idea
+.editorconfig
