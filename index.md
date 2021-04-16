@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# mina-webpack-plugin
 
-You can use the [editor on GitHub](https://github.com/HZFE/mina-webpack-plugin/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## 使用 webpack 开发原生小程序的优势
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. 比使用小程序开发者工具自带编译功能或使用 gulp，用 webpack 进行小程序开发更靠近 web 开发的体验，webpack 社区庞大，解决方案更多。
+   - 正常使用 npm 包；
+   - tree shaking；
+   - 使用 webpack loader / plugin；
+   - alias。
+2. 如果你没有一份代码支持多端的需求，那么相比使用各大小程序框架，使用 webpack 开发原生小程序：
+   - 不用担心框架不再维护；
+   - 不用学习不同框架的各类语法糖；
+   - 不用在踩小程序坑的基础上还要踩框架的坑。
 
-### Markdown
+## mina-webpack-plugin 介绍
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 作用
 
-```markdown
-Syntax highlighted code block
+1. 读取 app.json 配置自动收集所有入口模块；
+2. 配合 splitChunk 把通用依赖自动引入进文件中；
 
-# Header 1
-## Header 2
-### Header 3
+### 使用方法
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+npm i @hzfe/mina-webpack-plugin --save-dev
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+```js
+{
+  plugins: [
+    /**
+     * 可以传一个对象参数
+     * options = {
+     *   extensions: [".js"], // defalt
+     *   assetsChunkName: "__assets_chunk_name__", // default
+     * }
+     **/
+    new MinaPlugin(),
+  ];
+}
+```
 
-### Jekyll Themes
+## 相关项目
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/HZFE/mina-webpack-plugin/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- [小程序 webpack 开发模板](https://github.com/HZFE/mina-boilerplate)
+- [wxml-loader](https://github.com/HZFE/wxml-loader)
 
-### Support or Contact
+## License
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[MIT](./LICENSE)
