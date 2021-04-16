@@ -1,5 +1,8 @@
 # mina-webpack-plugin
 
+![npm](https://img.shields.io/npm/dm/mina-webpack-plugin)
+![npm](https://img.shields.io/npm/v/@hzfe/mina-webpack-plugin)
+
 ## 使用 webpack 开发原生小程序的优势
 
 1. 比使用小程序开发者工具自带编译功能或使用 gulp，用 webpack 进行小程序开发更靠近 web 开发的体验，webpack 社区庞大，解决方案更多。
