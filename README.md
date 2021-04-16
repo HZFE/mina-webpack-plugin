@@ -1,6 +1,6 @@
 # mina-webpack-plugin
 
-![npm](https://img.shields.io/npm/dm/mina-webpack-plugin)
+![npm](https://img.shields.io/npm/dt/@hzfe/mina-webpack-plugin)
 ![npm](https://img.shields.io/npm/v/@hzfe/mina-webpack-plugin)
 
 ## 使用 webpack 开发原生小程序的优势
